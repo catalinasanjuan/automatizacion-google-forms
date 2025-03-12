@@ -1,0 +1,34 @@
+# Automatización de Respuestas en Google Forms con Playwright
+
+Este script utiliza Playwright para automatizar el llenado y envío de respuestas en un formulario de Google Forms. Puede configurarse para enviar un número determinado de respuestas de manera automática.
+
+## Requisitos
+Antes de ejecutar el script, asegúrate de tener lo siguiente instalado en tu sistema:
+
+- Python 3.x
+- Playwright
+
+## Instalación
+
+1. **Clonar o descargar el repositorio** (si aplica) o guardar el archivo del script en tu máquina.
+2. **Instalar Playwright y sus dependencias** ejecutando los siguientes comandos en la terminal:
+   ```bash
+   pip install playwright
+   playwright install
+   ```
+
+## Configuración
+- **Modifica la variable `FORM_URL`** con el enlace de tu formulario de Google Forms.
+- **Ajusta el diccionario `respuestas`** con las opciones disponibles en tu formulario.
+- **Cambia el número en `range(50)`** si deseas enviar más o menos respuestas.
+
+## Ejecución
+Para ejecutar el script, abre la terminal en la carpeta donde se encuentra el archivo y corre:
+
+```bash
+python nombre_del_script.py # Aquí llamas a tu script con su respectivo nombre
+```
+
+El script abrirá un navegador, seleccionará respuestas aleatorias y enviará el formulario automáticamente.
+
+
