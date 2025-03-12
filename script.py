@@ -5,7 +5,7 @@ from playwright.async_api import async_playwright
 # URL tu formulario
 FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSc0XHGox-Hcrxk7rboS2oV7mHKoJWbHkGeLR2xkHX8See9R5A/viewform"
 
-# Aquí debes poner en los corchetes las respuestas de cada pregunta, segun corresponda. 
+# Aquí debes poner en los corchetes las respuestas de cada pregunta, según corresponda. Se deja imagen de referencia.
 respuestas = {
     "pregunta_1": ["Menos de 5 horas", "Entre 5 y 10 horas", "Entre 10 y 20 horas", "Más de 20 horas"],
     "pregunta_2": ["Ninguno", "1 - 2 proyectos", "3 - 5 proyectos", "Más de 5 proyectos"]
