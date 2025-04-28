@@ -1,34 +1,83 @@
-# Automatización de Respuestas en Google Forms con Playwright
+# Automatización de Respuestas en Google Forms
+Este proyecto contiene scripts que automatizan el llenado y envío de respuestas en un formulario de Google Forms, utilizando Playwright tanto en Python como en Node.js (JavaScript).
 
-Este script utiliza Playwright para automatizar el llenado y envío de respuestas en un formulario de Google Forms. Puede configurarse para enviar un número determinado de respuestas de manera automática.
+Incluye:
 
-## Requisitos
-Antes de ejecutar el script, asegúrate de tener lo siguiente instalado en tu sistema:
+Automatización masiva de respuestas (script libre).
 
-- Python 3.x
-- Playwright
+Test de validación de carga del formulario (archivo de prueba formal).
 
-## Instalación
+📋 Contenido del Proyecto
+Archivo	Descripción
+script.py	Script original en Python que envía múltiples respuestas automáticas a Google Forms.
+llenar_formulario.js	Script en JavaScript (Node.js) que replica el envío de respuestas múltiples.
+formulario.test.js	Archivo de prueba formal que valida que el formulario carga correctamente (Playwright test).
 
-1. **Clonar o descargar el repositorio** (si aplica) o guardar el archivo del script en tu máquina.
-2. **Instalar Playwright y sus dependencias** ejecutando los siguientes comandos en la terminal:
-   ```bash
-   pip install playwright
-   playwright install
-   ```
+Requisitos Previos
+Antes de ejecutar los scripts, asegúrate de tener instalado en tu sistema:
 
-## Configuración
-- **Modifica la variable `FORM_URL`** con el enlace de tu formulario de Google Forms.
-- **Ajusta el diccionario `respuestas`** con las opciones disponibles en tu formulario.
-- **Cambia el número en `range(50)`** si deseas enviar más o menos respuestas.
+Requisito	Para Python	Para JavaScript (Node.js)
+Python 3.x	✔️	❌
+Pip	✔️	❌
+Node.js y npm	❌	✔️
+Playwright	✔️ (pip install playwright)	✔️ (npm install -D @playwright/test)
 
-## Ejecución
-Para ejecutar el script, abre la terminal en la carpeta donde se encuentra el archivo y corre:
+Instalación
+Para scripts en Python (Windows o Mac)
+Instala Playwright para Python:
 
-```bash
-python nombre_del_script.py # Aquí llamas a tu script con su respectivo nombre
-```
 
-El script abrirá un navegador, seleccionará respuestas aleatorias y enviará el formulario automáticamente.
+
+pip install playwright
+python3 -m playwright install
+Clona o descarga el proyecto.
+
+Para scripts en JavaScript (Node.js) (Windows o Mac)
+Instala Node.js desde nodejs.org.
+
+Dentro del proyecto, instala Playwright:
+
+
+npm install -D @playwright/test
+npx playwright install
+
+Configuración
+FORM_URL:
+Modifica la constante FORM_URL en los scripts script.py y llenar_formulario.js para apuntar al enlace de tu propio Google Forms.
+
+Cantidad de respuestas:
+Ajusta el número de iteraciones en range(50) en Python o en for (let i = 0; i < 50; i++) en JavaScript para definir cuántas respuestas deseas enviar.
+
+Ejecución
+En Windows o MacOS
+Ejecutar el script en Python
+
+python3 script.py
+(o python script.py si tu sistema reconoce python directamente.)
+
+Ejecutar el script en JavaScript
+
+node llenar_formulario.js
+Ejecutar el archivo de test (formulario.test.js)
+En el package.json, asegúrate de tener este script:
+
+
+"scripts": {
+  "test": "playwright test"
+}
+Corre en Terminal:
+
+
+npm run test
+Playwright buscará todos los archivos que terminen en .test.js y ejecutará las pruebas.
+
+Notas importantes
+El script en Python usa asyncio y playwright.async_api.
+
+El script en Node.js usa @playwright/test.
+
+La automatización está configurada para abrir el navegador de forma visible (headless: false).
+
+Puedes modificar tiempos de espera (waitForTimeout) para hacer la simulación más humana o más rápida.
 
 

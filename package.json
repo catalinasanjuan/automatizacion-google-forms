@@ -1,0 +1,15 @@
+{
+  "name": "automatizaci-n-google-forms",
+  "version": "1.0.0",
+  "description": "Este script utiliza Playwright para automatizar el llenado y envío de respuestas en un formulario de Google Forms. Puede configurarse para enviar un número determinado de respuestas de manera automática.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
