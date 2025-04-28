@@ -4,7 +4,9 @@
   "description": "Este script utiliza Playwright para automatizar el llenado y envío de respuestas en un formulario de Google Forms. Puede configurarse para enviar un número determinado de respuestas de manera automática.",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test"
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright test --reporter=html && playwright show-report"
   },
   "keywords": [],
   "author": "",

@@ -26,6 +26,8 @@ Antes de ejecutar los scripts, asegúrate de tener instalado en tu sistema:
    ```bash
    pip install playwright
    python3 -m playwright install
+   npx playwright install
+
 
 2. Clona o descarga el proyecto.
 
@@ -59,6 +61,11 @@ Antes de ejecutar los scripts, asegúrate de tener instalado en tu sistema:
 ## Ejecutar Testfile:
    ```bash
    npm run test
+   npx playwright test --headed
+   npm run test -- --reporter=html
+   npx playwright show-report
+
+
 
 
 
