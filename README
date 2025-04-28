@@ -1,83 +1,66 @@
-# Automatización de Respuestas en Google Forms
-Este proyecto contiene scripts que automatizan el llenado y envío de respuestas en un formulario de Google Forms, utilizando Playwright tanto en Python como en Node.js (JavaScript).
+# 🎯 Automatización de Respuestas en Google Forms con Playwright
 
-Incluye:
+Este proyecto permite automatizar el llenado y envío de respuestas en un formulario de Google Forms, utilizando **Python** o **JavaScript** con **Playwright**.
 
-Automatización masiva de respuestas (script libre).
+---
 
-Test de validación de carga del formulario (archivo de prueba formal).
+## 📋 Requisitos Previos
 
-📋 Contenido del Proyecto
-Archivo	Descripción
-script.py	Script original en Python que envía múltiples respuestas automáticas a Google Forms.
-llenar_formulario.js	Script en JavaScript (Node.js) que replica el envío de respuestas múltiples.
-formulario.test.js	Archivo de prueba formal que valida que el formulario carga correctamente (Playwright test).
-
-Requisitos Previos
 Antes de ejecutar los scripts, asegúrate de tener instalado en tu sistema:
 
-Requisito	Para Python	Para JavaScript (Node.js)
-Python 3.x	✔️	❌
-Pip	✔️	❌
-Node.js y npm	❌	✔️
-Playwright	✔️ (pip install playwright)	✔️ (npm install -D @playwright/test)
+| Requisito       | Para Python                   | Para JavaScript (Node.js)      |
+|:----------------|:-------------------------------|:-------------------------------|
+| Python 3.x      | ✅                             | ❌                             |
+| Pip             | ✅                             | ❌                             |
+| Node.js y npm   | ❌                             | ✅                             |
+| Playwright      | `pip install playwright`       | `npm install -D @playwright/test` |
 
-Instalación
-Para scripts en Python (Windows o Mac)
-Instala Playwright para Python:
+---
+
+## ⚙️ Instalación
+
+### Para scripts en **Python** (Windows o Mac)
+
+1. Instala Playwright:
+
+   ```bash
+   pip install playwright
+   python3 -m playwright install
+
+2. Clona o descarga el proyecto.
+
+### Para scripts en **JavaScript (Node.js)** (Windows o Mac)
+1. Instala Node.js:
+2. Dentro del proyecto, instala Playwright:
+   ```bash
+   npm install -D @playwright/test
+   npx playwright install
+
+## ⚙️ Configuración
+
+### Cantidad de respuestas
+1. En Python (script.py) Ajusta el rango en:
+   ```bash
+   for i in range(50):
+2. En JavaScript Ajusta el rango en: 
+   ```bash
+   for (let i = 0; i < 50; i++) { ... }
+
+## 🚀 Ejecución
+
+### Ejecutar el script en Python
+   ```bash
+   python script.py
+
+### Ejecutar el script en JavaScript
+   ```bash
+   node script.js
+
+## Ejecutar Testfile:
+   ```bash
+   npm run test
 
 
 
-pip install playwright
-python3 -m playwright install
-Clona o descarga el proyecto.
-
-Para scripts en JavaScript (Node.js) (Windows o Mac)
-Instala Node.js desde nodejs.org.
-
-Dentro del proyecto, instala Playwright:
-
-
-npm install -D @playwright/test
-npx playwright install
-
-Configuración
-FORM_URL:
-Modifica la constante FORM_URL en los scripts script.py y llenar_formulario.js para apuntar al enlace de tu propio Google Forms.
-
-Cantidad de respuestas:
-Ajusta el número de iteraciones en range(50) en Python o en for (let i = 0; i < 50; i++) en JavaScript para definir cuántas respuestas deseas enviar.
-
-Ejecución
-En Windows o MacOS
-Ejecutar el script en Python
-
-python3 script.py
-(o python script.py si tu sistema reconoce python directamente.)
-
-Ejecutar el script en JavaScript
-
-node llenar_formulario.js
-Ejecutar el archivo de test (formulario.test.js)
-En el package.json, asegúrate de tener este script:
-
-
-"scripts": {
-  "test": "playwright test"
-}
-Corre en Terminal:
-
-
-npm run test
-Playwright buscará todos los archivos que terminen en .test.js y ejecutará las pruebas.
-
-Notas importantes
-El script en Python usa asyncio y playwright.async_api.
-
-El script en Node.js usa @playwright/test.
-
-La automatización está configurada para abrir el navegador de forma visible (headless: false).
-
-Puedes modificar tiempos de espera (waitForTimeout) para hacer la simulación más humana o más rápida.
 
 
